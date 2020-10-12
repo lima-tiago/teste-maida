@@ -32,3 +32,5 @@
     - Usado para agilizar o desenvolvimento dos componentes.
   - Mirage
     - Usado para fazer mock dos dados enquanto o front não se conecta com a API.
+  - Sass
+    - Para agilizar a escrita e compilar um css minificado.
