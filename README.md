@@ -28,4 +28,6 @@
     -- Usado para gerenciar as rotas sem precisar recarregar a página.
   - Vuetify
     -- Usado para agilizar o desenvolvimento dos componentes.
-  - 
+  - Mirage
+    -- Usado para fazer mock dos dados enquanto o front não se conecta com a API.
+  
