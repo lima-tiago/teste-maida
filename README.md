@@ -23,11 +23,12 @@
 
 ## Dependências do projeto
   - Vue CLI 3
-    -- A versão mais recente do Vue no dia 12/10/2020.
+    - A versão mais recente do Vue no dia 12/10/2020.
+  - Typescript
+    - O Vue 3 já vem com Typescript como padrão sem necessidade de instalar compilador.
   - Vue Router
-    -- Usado para gerenciar as rotas sem precisar recarregar a página.
+    - Usado para gerenciar as rotas sem precisar recarregar a página.
   - Vuetify
-    -- Usado para agilizar o desenvolvimento dos componentes.
+    - Usado para agilizar o desenvolvimento dos componentes.
   - Mirage
-    -- Usado para fazer mock dos dados enquanto o front não se conecta com a API.
-  
+    - Usado para fazer mock dos dados enquanto o front não se conecta com a API.
