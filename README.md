@@ -1,24 +1,31 @@
 # teste-maida
 
-## Project setup
-```
-yarn install
-```
+## Iniciando o projeto
+  - Como o projeto foi iniciado com yarn é recomendável desenvolver utilizando o yarn.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### Instalando o Yarn
+  - Site oficial: 
+  ``` https://classic.yarnpkg.com/en/docs/install/ ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### Instalando o Vue.Js
+  - Para iniciar o projeto em desenvolvimento é recomendável instalar o Vue globalmente para evitar possíveis bugs durante o desenvolvimento.
+  ``` yarn global add @vue/cli ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+### Instalando as dependências do projeto
+``` yarn install ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Iniciando o projeto em desenvolvimento
+``` yarn serve ``` 
+- O projeto irá iniciar na porta 8080.
+
+### Compilando o projeto para produção
+``` yarn build ```
+
+## Dependências do projeto
+  - Vue CLI 3
+    -- A versão mais recente do Vue no dia 12/10/2020.
+  - Vue Router
+    -- Usado para gerenciar as rotas sem precisar recarregar a página.
+  - Vuetify
+    -- Usado para agilizar o desenvolvimento dos componentes.
+  - 
