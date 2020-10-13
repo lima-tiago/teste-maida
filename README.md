@@ -34,3 +34,5 @@
     - Usado para fazer mock dos dados enquanto o front não se conecta com a API.
   - Sass
     - Para agilizar a escrita e compilar um css minificado.
+  - Axios
+    - Para se comunicar com a API(atualmente está se comunicando com dados mockados).
