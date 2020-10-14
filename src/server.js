@@ -25,6 +25,22 @@ export function makeServer({ environment = "development" } = {}) {
           return item.attrs.email === pedido.email && item.attrs.senha === pedido.senha
         })
       })
+
+      this.post('/recoverPass', (schema, request) => {
+        const users = schema.users.all()
+        const pedido = JSON.parse(request.requestBody).data
+
+        return users.models.filter(item => {
+          return item.attrs.email === pedido.email
+        })
+      })
+      this.put('/confirmNewPass/:id', (schema, request) => {
+        const id = request.params.id
+        const users = schema.users.find(id)
+        const pedido = JSON.parse(request.requestBody).data
+
+        return users.update(pedido)
+      })
     },
   })
 
