@@ -6,7 +6,7 @@ import { makeServer } from './server';
 
 Vue.config.productionTip = false
 
-// TODO: Colocar API condicional para mockar apenas em desenvolvimento quando tiver API oficial
+// TODO: Retirar API para mockar em desenvolvimento quando tiver API oficial
 makeServer()
 
 new Vue({
