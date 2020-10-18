@@ -70,5 +70,9 @@ export default {
     height: max-content
   .v-text-field--outlined
     fieldset
-      top: -10px
+      top: -10px !important
+  .v-btn > .v-btn__content .v-icon
+    color: #FF8822 !important
+  .theme--light.v-icon
+    color: #FF8822 !important
 </style>
