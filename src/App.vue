@@ -66,6 +66,11 @@ export default {
     color: rgba(0, 0, 0, 0.88)
     text-transform: uppercase
 
+  .container--fluid
+    margin-right: 0 !important
+    max-width: calc(100% - 342px) !important
+    @media screen and (max-width: 800px)
+      max-width: 100% !important
   .col
     height: max-content
   .v-text-field--outlined

@@ -34,7 +34,7 @@
         ></v-text-field>
         <div v-for="(item) in pedidosFiltrados" :key="item.id" class="pedidos">
           <v-col>
-            <span><b>{{ item.date }}, </b>Você vendeu <b>R$ {{ soma(item) }}</b></span>
+            <h6><b>{{ item.date }}, </b>Você vendeu <b>R$ {{ soma(item) }}</b></h6>
             <v-card v-for="(order, index) in item.orders" :key="index" @click="detalhePedido(order)">
               <v-row align="center">
                 <v-col cols="auto">
@@ -47,8 +47,8 @@
                 </v-col>
                 <v-col>
                   <v-row class="justify-space-between">
-                    <p>{{ order.client }}</p>
-                    <p>R$ {{ formatMoney(order.value) }}</p>
+                    <h6>{{ order.client }}</h6>
+                    <h6>R$ {{ formatMoney(order.value) }}</h6>
                   </v-row>
                   <v-row>
                     <span v-for="(food, i) in order.food" :key="i">{{ food }}</span>
@@ -66,8 +66,7 @@
 <script>
 // @ is an alias to /src
 import LeftMenu from './LeftMenu'
-// import GhostButton from '@/components/GhostButton'
-// import PrimaryButton from '@/components/PrimaryButton'
+import { mapActions } from 'vuex'
 
 import axios from 'axios'
 
@@ -104,6 +103,11 @@ export default {
   },
 
   methods: {
+    ...mapActions(['sendPedido']),
+    detalhePedido(order) {
+      this.sendPedido(order)
+      this.$router.push({name: 'Pedido'})
+    },
     soma(item) {
       let returner = 0
       item.orders.map(element => {
@@ -120,11 +124,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .container--fluid
-    margin-right: 0
-    max-width: calc(100% - 342px)
-    @media screen and (max-width: 800px)
-      max-width: 100%
   .row
     margin: 0
     padding: 5px 0

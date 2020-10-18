@@ -36,3 +36,5 @@
     - Para agilizar a escrita e compilar um css minificado.
   - Axios
     - Para se comunicar com a API(atualmente está se comunicando com dados mockados).
+  - Vuex
+    - Utilizado para gerenciamento de estado da aplicação.

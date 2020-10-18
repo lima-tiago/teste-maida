@@ -22,6 +22,7 @@ export function makeServer({ environment = "development" } = {}) {
         date: '13/05/2019',
         orders: [
           {
+            id: 1,
             client: 'Marcel Batista',
             food: [
               'cuscuz com calabresa',
@@ -32,6 +33,7 @@ export function makeServer({ environment = "development" } = {}) {
             photo: require('./assets/clientes/marcel.png')
           },
           {
+            id: 2,
             client: 'Fernanda Siqueira',
             food: [
               'iogurte desnatado com maçã'
@@ -41,6 +43,7 @@ export function makeServer({ environment = "development" } = {}) {
             photo: require('./assets/clientes/fernanda.png')
           },
           {
+            id: 3,
             client: 'Luiz Oliveira',
             food: [
               '2x bolo frito',
@@ -48,7 +51,7 @@ export function makeServer({ environment = "development" } = {}) {
             ],
             value: 4.50,
             prato: require('./assets/pratos/vitaminas.png'),
-            photo: require('./assets/clientes/marcel.png')
+            photo: require('./assets/clientes/luiz.png')
           }
         ]
       })
@@ -58,6 +61,7 @@ export function makeServer({ environment = "development" } = {}) {
         date: '09/05/2019',
         orders: [
           {
+            id: 4,
             client: 'Ana Virlania',
             food: [
               '2x sanduiche de pão de arroz',
@@ -68,6 +72,7 @@ export function makeServer({ environment = "development" } = {}) {
             photo: require('./assets/clientes/ana-virlania.png')
           },
           {
+            id: 5,
             client: 'Marcel Batista',
             food: [
               'cuscuz com calabresa',
