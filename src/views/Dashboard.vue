@@ -50,7 +50,7 @@
                     <h6>{{ order.client }}</h6>
                     <h6>R$ {{ formatMoney(order.value) }}</h6>
                   </v-row>
-                  <v-row>
+                  <v-row class="subtitle">
                     <span v-for="(food, i) in order.food" :key="i">{{ food }}</span>
                   </v-row>
                 </v-col>
@@ -85,7 +85,7 @@ export default {
   mounted () {
     axios.get('api/pedidos')
     .then(response => {
-      this.pedidos = response.data.pedidos
+      this.pedidos = response.data.pedidos.reverse()
     })
   },
 
@@ -107,6 +107,9 @@ export default {
     detalhePedido(order) {
       this.sendPedido(order)
       this.$router.push({name: 'Pedido'})
+    },
+    novoPedido() {
+      this.$router.push({ name:'newOrder' })
     },
     soma(item) {
       let returner = 0
@@ -163,4 +166,25 @@ export default {
         font-size: 12px
         &:not(:last-child):after
           content: ', '
+
+  @media screen and (max-width: 800px)
+    .pedidos
+      .v-card
+        .subtitle
+          max-width: 200px
+          display: block
+          white-space: nowrap
+          flex-wrap: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+  @media screen and (max-width: 320px)
+    .pedidos
+      .v-card
+        .subtitle
+          max-width: 180px
+          display: block
+          white-space: nowrap
+          flex-wrap: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
 </style>

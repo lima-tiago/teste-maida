@@ -38,3 +38,10 @@
     - Para se comunicar com a API(atualmente está se comunicando com dados mockados).
   - Vuex
     - Utilizado para gerenciamento de estado da aplicação.
+
+## Acessando a Dashboard
+  ```
+  email: vanusa@maida.health
+  senha: @vanusa#
+  ```
+  - Também é possível recuperar a senha desse email, para alterar a senha.

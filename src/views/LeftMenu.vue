@@ -10,7 +10,8 @@
     <div class="left-menu__logo">
       <router-link to="/dashboard">
         <v-img
-          :src="require('../assets/logo-white.svg')"
+          src="../assets/logo-white.svg"
+          lazy-src="../assets/logo-white.svg"
           class="logo"
           contain
           width="112px"
